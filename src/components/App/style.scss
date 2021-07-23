@@ -1,0 +1,9 @@
+@use 'src/styles/vars';
+
+.chat {
+  background-color: vars.$colorAlt;
+  width: 95%;
+  max-width: 600px;
+  margin: 0 auto;
+  height: 100vh;
+}

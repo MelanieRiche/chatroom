@@ -1,0 +1,57 @@
+@use 'src/styles/vars';
+
+@keyframes pop {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.messages {
+  // quand on utilise une expression scss dans une fonction css  il faut mettre l'expression entre #{}
+  height: calc(100vh - #{vars.$inputHeight});
+  overflow-y: auto;
+  padding: vars.$gutter;
+  scroll-behavior: smooth;
+}
+
+.message {
+  margin: (vars.$gutter * 2) 0;
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &-author {
+    margin-left: vars.$gutter;
+  }
+
+  &-content {
+    background-color: white;
+    padding: vars.$gutter;
+    border-radius: vars.$gutter;
+    display: inline-block;
+    color: vars.$colorMain;
+    position: relative;
+    margin-top: vars.$gutter;
+    min-width: 70px;
+    animation: pop 0.5s 1 vars.$easeBack;
+    transform-origin: center center;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 100%;
+      left: 1rem;
+      border-right: 15px solid white;
+      border-top: 15px solid transparent;
+    }
+  }
+
+  &--mine {
+    text-align: right;
+  }
+}

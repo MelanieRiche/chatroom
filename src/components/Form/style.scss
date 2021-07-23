@@ -1,0 +1,29 @@
+@use 'src/styles/vars';
+
+.form {
+  position: relative;
+
+  &-input {
+    width: 100%;
+    height: vars.$inputHeight;
+    border: 0;
+    background-color: white;
+    padding: vars.$gutter 4.5rem vars.$gutter vars.$gutter;
+    font-size: 1.2em;
+  }
+
+  &-submit {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: vars.$inputHeight;
+    color: vars.$colorMain;
+    padding: 0 vars.$gutter;
+    background-color: transparent;
+    border: 0;
+
+    &:hover, &:focus {
+      background-color: rgba(0,0,0,.1);
+    }
+  }
+}

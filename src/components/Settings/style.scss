@@ -1,0 +1,14 @@
+@use 'src/styles/vars';
+
+.settings {
+  position: fixed;
+  right: 0;
+  top: 0;
+  padding: vars.$gutter;
+  transform: translateX(calc(100% - #{vars.$gutter}));
+  transition: transform 0.3s vars.$easeBack;
+
+  &--open {
+    transform: translateX(0);
+  }
+}

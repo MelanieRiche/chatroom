@@ -1,0 +1,11 @@
+@use 'sass:color';
+
+$colorMain: #13405D;
+$colorAlt: color.scale($colorMain, $lightness: 80%);
+$colorAction: #5300FF;
+
+$gutter: 1rem;
+
+$inputHeight: 4rem;
+
+$easeBack: cubic-bezier(.34,1.71,.83,1.02);
